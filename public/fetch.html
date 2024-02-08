@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Result service -2024</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Header styling */
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9e0b0b; /* Light grey background */
+        padding: 10px;
+        color: aliceblue;
+        position: fixed; /* Fixed at the top */
+        width: 100%;
+        top: 10px; /* Slightly down from the top */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+
+      .header i {
+        margin-right: 10px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <i class="fas fa-lock"></i><span>Result Service</span>
+    </div>
+    <form id="fetchForm" autocomplete="off">
+      <h1 class="form-heading"><i class="fas fa-lock"></i> View Result</h1>
+      <input
+        type="number"
+        name="rollNumber"
+        placeholder="Roll Number"
+        required
+      /><br />
+      <input
+        type="date"
+        name="dob"
+        placeholder="Date of Birth"
+        required
+      /><br />
+      <button type="submit">RESULT</button>
+    </form>
+
+    <script src="js/fetch.js"></script>
+    <script type="text/javascript">
+      // Disable right-click
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // Disable CTRL+U (View Source)
+      document.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.key === "u") {
+          event.preventDefault();
+        }
+      });
+    </script>
+
+    <footer>
+      <p id="info">
+        © Site vesrion-2024.1.0<br />
+        Site is designed and hosted by Web-service devsion<br />
+        *Product is not for sale and underdevelopment*<br />
+        Contact-<a
+          href="mailto:shashwatdogra1@gmail.com"
+          target="_blank"
+          title="Go to Email section"
+          style="color: white"
+          >shashwatdogra1@gmail.com</a
+        >
+      </p>
+      <!-- Add additional footer content here -->
+    </footer>
+  </body>
+</html>

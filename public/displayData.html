@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Student Report Card</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Inline CSS for demonstration. Move this to your CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      @media print {
+        /* Hide everything by default */
+        body * {
+          display: none;
+        }
+        #headerUP {
+          display: none; /* This hides the header during printing */
+        }
+        /* Display only the print section */
+        .reportCard,
+        .reportCard * {
+          display: block;
+        }
+
+        /* Ensure the print section takes up the full page */
+        .reportCard {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+    <style>
+      /* Header styling */
+      .headerUP {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9e0b0b; /* Light grey background */
+        padding: 10px;
+        color: aliceblue;
+        position: fixed; /* Fixed at the top */
+        width: 100%;
+        top: 10px; /* Slightly down from the top */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+
+      .headerUP i {
+        margin-right: 10px; /* Space between icon and text */
+      }
+    </style>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background: #f4f4f4;
+      }
+      #reportCard {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+        background: white;
+        border: 1px solid #000;
+      }
+      .header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .header img {
+        border: 1px solid #000;
+      }
+      .header div {
+        flex-grow: 1;
+        margin-left: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #000;
+        text-align: left;
+        padding: 8px;
+      }
+      .section-title {
+        font-weight: bold;
+      }
+      #printButton {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .signatures {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+      }
+
+      .signature {
+        border: 1px solid #000;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="headerUP">
+      <i class="fas fa-lock"></i><span>Result Service</span>
+    </div>
+    <div id="reportCard" class="reportCard">
+      <div class="header">
+        <img
+          id="userPhoto"
+          alt="User Photo"
+          width="120"
+          height="150"
+          src="/uploads/photo.jpg"
+        />
+        <div>
+          <h2>STUDENT INFORMATION</h2>
+          <p>NAME: <span id="studentName">--</span></p>
+          <p>ROLL NUMBER: <span id="studentRoll">--</span></p>
+          <p>PINCODE: <span id="studentPincode">--</span></p>
+          <p>D.O.B: <span id="studentDob">--</span></p>
+          <p>CONTACT NUMBER: <span id="studentContact">--</span></p>
+        </div>
+      </div>
+      <h2>SCORE INFORMATION</h2>
+      <table>
+        <tr>
+          <td>SUBJECT: PHYSICS</td>
+          <td>SCORE: <span id="physicsScore">--</span></td>
+        </tr>
+        <tr>
+          <td>SUBJECT: CHEMISTRY</td>
+          <td>SCORE: <span id="chemistryScore">--</span></td>
+        </tr>
+        <tr>
+          <td>SUBJECT: MATHEMATICS</td>
+          <td>SCORE: <span id="mathematicsScore">--</span></td>
+        </tr>
+        <tr>
+          <td>SUBJECT: ENGLISH</td>
+          <td>SCORE: <span id="englishScore">--</span></td>
+        </tr>
+      </table>
+      <!-- ... existing HTML ... -->
+
+      <div class="signatures">
+        <div class="signature" id="leftSignature">
+          <p>Examination head signature:</p>
+          <img
+            src="/uploads/sign.jpg"
+            alt="Authorized Signature"
+            width="100"
+            height="50"
+          />
+        </div>
+        <div class="signature">
+          <p>User Signature:</p>
+          <img
+            id="userSignature"
+            src="/uploads/signature.jpg"
+            alt="User Signature"
+            width="100"
+            height="50"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- ... remaining HTML ... -->
+
+    <button onclick="window.print();">Print</button>
+    <script src="js/displayData.js"></script>
+
+    <script type="text/javascript">
+      // Disable right-click
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // Disable CTRL+U (View Source)
+      document.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.key === "u") {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <footer>
+      <p id="info">
+        © Site vesrion-2024.1.0<br />
+        Site is designed and hosted by Web-service devsion<br />
+        *Product is not for sale and underdevelopment*<br />
+        Contact-<a
+          href="mailto:shashwatdogra1@gmail.com"
+          target="_blank"
+          title="Go to Email section"
+          style="color: white"
+          >shashwatdogra1@gmail.com</a
+        >
+      </p>
+      <!-- Add additional footer content here -->
+    </footer>
+  </body>
+</html>

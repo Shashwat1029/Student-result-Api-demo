@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>STUDENT-UPLOAD</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+      /* Header styling */
+      .header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0b489e; /* Light grey background */
+        padding: 10px;
+        color: aliceblue;
+        position: fixed; /* Fixed at the top */
+        width: 100%;
+        top: 0; /* Slightly down from the top */
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Shadow effect */
+      }
+
+      .header i {
+        margin-right: 10px; /* Space between icon and text */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <i class="fas fa-lock"></i><span>Score Upload service -2024</span>
+    </div>
+    <div class="container">
+      <form id="userForm" enctype="multipart/form-data" autocomplete="off">
+        <p>
+          *FILL THE INFORMATION CORRECTLY
+          <span>(once submitted, cannot be changed)</span>
+        </p>
+        <div class="form-section">
+          <h2>Basic Information</h2>
+          
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Name"
+          required
+          autocomplete="off"
+        /><br />
+
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required /><br />
+
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Phone Number"
+          required
+          autocomplete="off"
+        /><br />
+
+        <label for="rollNumber">Roll Number:</label>
+        <input
+          type="number"
+          id="rollNumber"
+          name="rollNumber"
+          placeholder="Roll Number"
+          required
+          autocomplete="off"
+        /><br />
+
+
+        <label for="pinCode">Pin Code:</label>
+        <input
+          type="text"
+          id="pinCode"
+          name="pinCode"
+          placeholder="Pin Code"
+          required
+          autocomplete="off"
+        /><br />
+        </div>
+<div class="form-section">
+  <h2>Marks and Details</h2>
+ 
+        <label for="photo">Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*" /><br />
+
+
+        <label for="signature">Signature:</label>
+        <input
+          type="file"
+          id="signature"
+          name="signature"
+          accept="image/*"
+        /><br />
+
+
+        <label for="physics">Physics Marks (0-100):</label>
+        <input
+          type="number"
+          id="physics"
+          name="physics"
+          placeholder="Physics Marks (0-100)"
+          required
+        /><br />
+
+        <label for="chemistry">Chemistry Marks (0-100):</label>
+        <input
+          type="number"
+          id="chemistry"
+          name="chemistry"
+          placeholder="Chemistry Marks (0-100)"
+          required
+        /><br />
+
+        <label for="mathematics">Mathematics Marks (0-100):</label>
+        <input
+          type="number"
+          id="mathematics"
+          name="mathematics"
+          placeholder="Mathematics Marks (0-100)"
+          required
+        /><br />
+
+        <label for="english">English Marks (0-100):</label>
+        <input
+          type="number"
+          id="english"
+          name="english"
+          placeholder="English Marks (0-100)"
+          required
+        /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+      // Disable right-click
+      document.addEventListener("contextmenu", (event) =>
+        event.preventDefault()
+      );
+
+      // Disable CTRL+U (View Source)
+      document.addEventListener("keydown", (event) => {
+        if (event.ctrlKey && event.key === "u") {
+          event.preventDefault();
+        }
+      });
+    </script>
+    <footer>
+      <p id="info">
+        © Site vesrion-2024.1.0<br />
+        Site is designed and hosted by Web-service devsion<br/>
+        *Product is not for sale and underdevelopment*<br/>
+        Contact-<a href="mailto:shashwatdogra1@gmail.com" target="_blank" title="Go to Email section"  style="color: white;">shashwatdogra1@gmail.com</a>
+
+
+      </p>
+      <!-- Add additional footer content here -->
+    </footer>
+  </div>
+  
+  </body>
+</html>

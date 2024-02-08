@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Division Service</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- Inline CSS for demonstration. Move this to your CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      /* Add your CSS styles here */
+      .header,
+      .footer {
+        text-align: center;
+        padding: 0;
+        background-color: rgb(73, 73, 207);
+        color: aliceblue;
+        margin: 0;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+      }
+      .dialog {
+        display: none;
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid #000;
+        padding: 20px;
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Choose Service</h1>
+    </div>
+
+    <div class="center">
+      <!-- Replace with your lock icon image path -->
+      <button onclick="showLogin()">For Teachers</button>
+      <button onclick="window.location.href='fetch.html'">For Students</button>
+    </div>
+
+    <div class="dialog" id="errorDialog">
+      <p>Error: Incorrect Username</p>
+      <button onclick="closeDialog()">OK</button>
+    </div>
+
+    <div class="footer">
+      <p>
+        © Site vesrion-2024.1.0<br />
+        Site is designed and hosted by Web-service devsion<br />
+        *Product is not for sale and underdevelopment*<br />
+        Contact-<a
+          href="mailto:shashwatdogra1@gmail.com"
+          target="_blank"
+          title="Go to Email section"
+          style="color: white"
+          >shashwatdogra1@gmail.com</a
+        >
+      </p>
+    </div>
+
+    <script>
+      // Add your JavaScript here
+      function showLogin() {
+        var username = prompt("Please enter your username");
+        if (username === "Head@123") {
+          window.location.href = "Marks.html";
+        } else {
+          document.getElementById("errorDialog").style.display = "block";
+        }
+      }
+
+      function closeDialog() {
+        document.getElementById("errorDialog").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
